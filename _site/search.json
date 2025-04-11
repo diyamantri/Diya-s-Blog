@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/garden-a1/My_Blogs.html",
+    "href": "posts/garden-a1/My_Blogs.html",
+    "title": "My_Blogs",
+    "section": "",
+    "text": "Destruction and Rebirth\n\n\nThis animation is an interpretation of nature’s change, illustrating the process from turmoil to peaceful renewal. With dynamic elements like clouds, rain, lightning, to ultimately sunshine, flowers, and fluttering butterflies, the work represents the strength and beauty of nature in transition.\nIt is a metaphor for turmoil and calm, derived from changing seasons. It talks about destruction and rebirth and restates the idea of rebirth even during the most darkest storms. Its shift in ambience from storm and rain to bright sunshine makes one feel calm, cheerful, and hopeful.\n\n\n\n\n\n\n\nThe scene starts with clouds, rain, and occasional lightning\n\nAfter 12 seconds, the sky gradually brightens, the sun rises, and the rain fades.\n\nAfter 16 seconds, a special dandelion animation begins.\n\n\ngenerateClouds(): Creates 30 clouds with random sizes and speeds.\n\ngenerateRain(): Creates 500 raindrops that move down.\n\ndrawClouds(progress): Moves clouds and fades them as the scene transitions.\n\ndrawRain(progress): Draws and animates falling raindrops.\n\nfunction lightningEffect(): Flashes a white rectangle and draws a bright lightning bolt randomly.\n\nlerp(50, 150, transitionProgress): Gradually increases the sun’s size."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Diya",
+    "section": "",
+    "text": "My_Blogs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 25, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  }
+]
