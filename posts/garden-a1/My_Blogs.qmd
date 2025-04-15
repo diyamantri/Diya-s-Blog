@@ -1,0 +1,50 @@
+---
+title: "My_Blogs"
+format: html
+---
+<style>
+
+.navbar {
+    background: #2f5c70;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #bee7fa;
+  }
+
+</style>
+
+<h2 style="color:black">Destruction and Rebirth</h2>
+<p>This animation is an interpretation of nature’s change, illustrating the process from turmoil to peaceful renewal. With dynamic elements like clouds, rain, lightning, to ultimately sunshine, flowers, and fluttering butterflies, the work represents the strength and beauty of nature in transition.
+
+It is a metaphor for turmoil and calm, derived from changing seasons. It talks about destruction and rebirth and restates the idea of rebirth even during the most darkest storms. Its shift in ambience from storm and rain to bright sunshine makes one feel calm, cheerful, and hopeful.</p>
+
+::: {#p5-container}
+<iframe src="https://editor.p5js.org/diyamantri/sketches/8Xz9iE-N_" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
+</iframe>
+:::
+
+<p>
+<li>The scene starts with clouds, rain, and occasional lightning
+<li>After 12 seconds, the sky gradually brightens, the sun rises, and the rain fades.
+<li>After 16 seconds, a special dandelion animation begins.
+<hr>
+<li>generateClouds(): Creates 30 clouds with random sizes and speeds.
+<li>generateRain(): Creates 500 raindrops that move down.
+<li>drawClouds(progress): Moves clouds and fades them as the scene transitions.
+<li>drawRain(progress): Draws and animates falling raindrops.
+<li>function lightningEffect(): Flashes a white rectangle and draws a bright lightning bolt randomly.
+<li>lerp(50, 150, transitionProgress): Gradually increases the sun’s size.
+</p>
