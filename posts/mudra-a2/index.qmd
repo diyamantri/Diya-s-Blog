@@ -3,7 +3,6 @@ title: "My Blogs"
 format: html
 ---
 
-```{=html}
 <style>
 
 .navbar {
@@ -27,11 +26,10 @@ format: html
   }
 
 </style>
-```
 
 <h2 style="color:black">
 
-Destruction and Rebirth
+Mudra Training and Detection
 
 </h2>
 
@@ -43,11 +41,9 @@ It is a metaphor for turmoil and calm, derived from changing seasons. It talks a
 
 </p>
 
-::: {#p5-container}
-<iframe src="https://editor.p5js.org/diyamantri/sketches/8Xz9iE-N_" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
+<iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
 
 </iframe>
-:::
 
 <p>
 
