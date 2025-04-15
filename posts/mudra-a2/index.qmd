@@ -43,7 +43,7 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
 <hr>
 
-<p>Our custom-trained model plays the perfect Chitta Swarams when it detects traditional Indian mudras. Just make a mudra to your camera, and it will recognize it and start singing the Raaga!</p>
+<p>Our custom-trained model plays the perfect Chitta Swarams when it detects traditional Indian mudras. Just make a mudra to your camera, and it will recognize it and commence singing the Raaga!</p>
 
 <iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
 
