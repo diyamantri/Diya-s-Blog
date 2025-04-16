@@ -3,7 +3,6 @@ title: "Mudra Training and Detection"
 format: html
 author: "Diya Mantri"
 date: "2025-04-15"
-categories: [news]
 ---
 
 ```{=html}
