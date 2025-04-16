@@ -3,7 +3,7 @@ title: "Mudra Training and Detection"
 format: html
 author: "Diya Mantri"
 date: "2025-04-15"
-image: mudra-cover.jpg
+image: mudra.jpg
 description: Make a mudra, and our model sings the perfect Raaga!
 ---
 
@@ -46,7 +46,7 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 <!-- Your iframe --> <iframe src="https://mudra-chittaswaram-classifier.netlify.app"
           width="800"
           height="800"
-          style="border: 1px solid #ccc; border-radius: 12px;"
+          style="border: 3px solid #2f5c70; border-radius: 10px;"
           loading="lazy"> </iframe>
 
 <!-- Transparent clickable layer --> <a href="https://mudra-chittaswaram-classifier.netlify.app" 
