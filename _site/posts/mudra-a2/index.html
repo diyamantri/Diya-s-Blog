@@ -187,18 +187,74 @@ Our custom-trained model plays the perfect Chitta Swarams when it detects tradit
 The code is only functional in a local environment when VSCode is used in conjunction with the Live Server extension. The following is just to show the functionality of the code.
 </p>
 <iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
+</iframe>
+<hr>
 <p>
 <strong>Mudra Model Project Flow</strong>
 </p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:https://github.com/">https://github.com/</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:https://twitter.com">https://twitter.com</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">Mudra Training and Detection – Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">Mudra Training and Detection – Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">Mudra Training and Detection – Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Diya</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
+<p>
+</p><p><strong>Dataset Creation</strong></p>
+<ul>
+<li><p>Collected hand pose images showing different mudras using both left and right hands.</p></li>
+<li><p>Extracted 21 hand keypoints per image (x, y coordinates) using a hand-tracking model.</p></li>
+<li><p>Stored data in a CSV format: 42 columns for keypoints + 1 column for output label (Mudra_Hand format, e.g., Mayura_L).</p>
+<p></p>
+<p>
+</p><p><strong>Link to Dataset Creation Code</strong></p>
+<p>The code functions correctly only in a local environment using VSCode with the Live Server extension. The setup shown below illustrates the development environment to help demonstrate how the code works.</p>
+<p></p>
+<iframe src="https://editor.p5js.org/diyamantri/sketches/pnf5vzBoL" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
+</iframe></li>
+</ul>
+<p>
+</p><p><strong>Data Validation</strong></p>
+<ul>
+<li><p>Checked for missing or inaccurately plotted keypoints.</p></li>
+<li><p>Ensured correct label formatting and consistency across rows.</p></li>
+<li><p>Identified class imbalance (e.g., fewer samples of katakamukha) and to fixed it.</p></li>
+<li><p>Ran data through ChatGPT for quality feedback.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Model Training</strong></p>
+<ul>
+<li><p>Used the formatted CSV to train a neural network model.</p></li>
+<li><p>Monitored loss values to track model learning.</p></li>
+<li><p>Saved trained models as .json and .bin files.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Model Testing</strong></p>
+<ul>
+<li><p>Tested the model with new hand keypoint data to verify predictions.</p></li>
+<li><p>Observed inconsistencies across browsers (e.g., the model worked on Firefox but not Chrome).</p></li>
+<li><p>Discovered potential issues with model file parsing and incorrect predictions.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Debugging Phase</strong></p>
+<ul>
+<li><p>Identified possible causes like:</p>
+<ul>
+<li><p>Invalid or corrupted weight files</p></li>
+<li><p>Incorrect CSV formatting (e.g., confusion between one output column vs.&nbsp;two)</p></li>
+<li><p>Heavy or skipped images during preprocessing</p></li>
+</ul></li>
+<li><p>Noted that katakamukha images may have been bypassed due to tracking failures.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Next Steps</strong></p>
+<ul>
+<li><p>Debugged the image-to-CSV converter script to ensure no images are skipped.</p></li>
+<li><p>Finalised the prediction algorithm and integrated it with Chitta Swarams for real-time interaction.</p>
+<p></p></li>
+</ul>
+
+
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -620,7 +676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
-</iframe></main></div></body></html>
+
+
+</body></html>

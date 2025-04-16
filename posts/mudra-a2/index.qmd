@@ -40,14 +40,96 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
 <p>Our custom-trained model plays the perfect Chitta Swarams when it detects traditional Indian mudras. Just make a mudra to your camera, and it will recognize it and start singing the Raaga!</p>
 
-<iframe src="https://mudra-chittaswaram-classifier.netlify.app" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
-
-</iframe>
+<iframe src="https://mudra-chittaswaram-classifier.netlify.app" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
 
 <hr>
 
 <p>The code is only functional in a local environment when VSCode is used in conjunction with the Live Server extension. The following is just to show the functionality of the code.</p>
 
-<iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
+<iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
+
+<hr>
 
 <p>**Mudra Model Project Flow**</p>
+
+<p>
+
+**Dataset Creation**
+
+-   Collected hand pose images showing different mudras using both left and right hands.
+
+-   Extracted 21 hand keypoints per image (x, y coordinates) using a hand-tracking model.
+
+-   Stored data in a CSV format: 42 columns for keypoints + 1 column for output label (Mudra_Hand format, e.g., Mayura_L).
+
+    </p>
+
+    <p>**Link to Dataset Creation Code**
+
+    The code functions correctly only in a local environment using VSCode with the Live Server extension. The setup shown below illustrates the development environment to help demonstrate how the code works.</p>
+
+    <iframe src="https://editor.p5js.org/diyamantri/sketches/pnf5vzBoL" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
+
+<p>
+
+**Data Validation**
+
+-   Checked for missing or inaccurately plotted keypoints.
+
+-   Ensured correct label formatting and consistency across rows.
+
+-   Identified class imbalance (e.g., fewer samples of katakamukha) and to fixed it.
+
+-   Ran data through ChatGPT for quality feedback.
+
+</p>
+
+<p>
+
+**Model Training**
+
+-   Used the formatted CSV to train a neural network model.
+
+-   Monitored loss values to track model learning.
+
+-   Saved trained models as .json and .bin files.
+
+</p>
+
+<p>
+
+**Model Testing**
+
+-   Tested the model with new hand keypoint data to verify predictions.
+
+-   Observed inconsistencies across browsers (e.g., the model worked on Firefox but not Chrome).
+
+-   Discovered potential issues with model file parsing and incorrect predictions.
+
+</p>
+
+<p>
+
+**Debugging Phase**
+
+-   Identified possible causes like:
+
+    -   Invalid or corrupted weight files
+
+    -   Incorrect CSV formatting (e.g., confusion between one output column vs. two)
+
+    -   Heavy or skipped images during preprocessing
+
+-   Noted that katakamukha images may have been bypassed due to tracking failures.
+
+</p>
+
+<p>
+
+**Next Steps**
+
+-   Debugged the image-to-CSV converter script to ensure no images are skipped.
+
+-   Finalised the prediction algorithm and integrated it with Chitta Swarams for real-time interaction.
+
+    </p>
