@@ -46,7 +46,13 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
 <p>The code is only functional in a local environment when VSCode is used in conjunction with the Live Server extension. The following is just to show the functionality of the code.</p>
 
+<details>
+
+<summary>Click to open the sketch</summary>
+
 <iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
+
+</details>
 
 <hr>
 
@@ -148,7 +154,13 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
     The code is only functional in a local environment when VSCode is used in conjunction with the Live Server extension. The following is just to show the functionality of the code.</p>
 
+    <details>
+
+    <summary>Click to open the sketch</summary>
+
     <iframe src="https://editor.p5js.org/diyamantri/sketches/pnf5vzBoL" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
+
+    </details>
 
 <p>
 
