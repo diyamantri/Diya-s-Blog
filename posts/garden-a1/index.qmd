@@ -1,5 +1,5 @@
 ---
-title: "My Blogs"
+title: "Destruction and Rebirth"
 format: html
 ---
 
@@ -28,12 +28,6 @@ format: html
 
 </style>
 ```
-
-<h2 style="color:black">
-
-Destruction and Rebirth
-
-</h2>
 
 <p>
 
