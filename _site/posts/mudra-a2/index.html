@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>My Blogs – Diya</title>
+<title>Mudra Training and Detection – Diya</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">My Blogs</h1>
+      <h1 class="title">Mudra Training and Detection</h1>
                       </div>
   </div>
     
@@ -158,11 +158,7 @@ ul.task-list li input[type="checkbox"] {
   .navbar a:hover {
     color: #bee7fa;
   }
-
 </style>
-<h2 style="color:black" class="anchored">
-<p>Mudra Training and Detection</p>
-</h2>
 <p style="font-size:10">
 </p><p>Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M</p>
 <p></p>
@@ -172,6 +168,62 @@ Our custom-trained model plays the perfect Chitta Swarams when it detects tradit
 </p>
 <iframe src="https://editor.p5js.org/diyamantri/sketches/-gJvkerKd" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;">
 </iframe>
+<hr>
+<p>
+<strong>Mudra Model Project Flow</strong>
+</p>
+<p>
+</p><p><strong>Dataset Creation</strong></p>
+<ul>
+<li><p>Collected hand pose images showing different mudras using both left and right hands.</p></li>
+<li><p>Extracted 21 hand keypoints per image (x, y coordinates) using a hand-tracking model.</p></li>
+<li><p>Stored data in a CSV format: 42 columns for keypoints + 1 column for output label (Mudra_Hand format, e.g., Mayura_L).</p>
+<p></p></li>
+</ul>
+<p>
+</p><p><strong>Data Validation</strong></p>
+<ul>
+<li><p>Checked for missing or inaccurately plotted keypoints.</p></li>
+<li><p>Ensured correct label formatting and consistency across rows.</p></li>
+<li><p>Identified class imbalance (e.g., fewer samples of katakamukha) and to fixed it.</p></li>
+<li><p>Ran data through ChatGPT for quality feedback.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Model Training</strong></p>
+<ul>
+<li><p>Used the formatted CSV to train a neural network model.</p></li>
+<li><p>Monitored loss values to track model learning.</p></li>
+<li><p>Saved trained models as .json and .bin files.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Model Testing</strong></p>
+<ul>
+<li><p>Tested the model with new hand keypoint data to verify predictions.</p></li>
+<li><p>Observed inconsistencies across browsers (e.g., the model worked on Firefox but not Chrome).</p></li>
+<li><p>Discovered potential issues with model file parsing and incorrect predictions.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Debugging Phase</strong></p>
+<ul>
+<li><p>Identified possible causes like:</p>
+<ul>
+<li><p>Invalid or corrupted weight files</p></li>
+<li><p>Incorrect CSV formatting (e.g., confusion between one output column vs.&nbsp;two)</p></li>
+<li><p>Heavy or skipped images during preprocessing</p></li>
+</ul></li>
+<li><p>Noted that katakamukha images may have been bypassed due to tracking failures.</p></li>
+</ul>
+<p></p>
+<p>
+</p><p><strong>Next Steps</strong></p>
+<ul>
+<li><p>Debugged the image-to-CSV converter script to ensure no images are skipped.</p></li>
+<li><p>Finalised the prediction algorithm and integrated it with <strong>Chitta Swarams</strong> for real-time interaction.</p>
+<p></p></li>
+</ul>
 
 
 
