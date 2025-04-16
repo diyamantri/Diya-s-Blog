@@ -64,9 +64,89 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
     </p>
 
+    <p>**Code for File Path Nomenclature**
+
+    This Python script converts randomly named files into sequentially organized and correctly labeled files.
+
+    </p>
+
+    <details><summary>Click to view the Python script</summary>
+
+    ``` python
+    import os
+
+    def rename_with_fixed_prefix(folder_path, prefix="T3M1R"):
+        """
+        Renames all image files sequentially with fixed prefix and incrementing 3-digit number.
+        
+        Args:
+            folder_path (str): Path to the folder containing images
+            prefix (str): Fixed prefix for filenames (default: "T3M2L")
+        """
+        # Get all image files with common extensions
+        image_extensions = ('.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff', '.webp')
+        image_files = [f for f in os.listdir(folder_path) 
+                     if f.lower().endswith(image_extensions)]
+        
+        # Sort files by creation time (oldest first)
+        image_files.sort(key=lambda f: os.path.getctime(os.path.join(folder_path, f)))
+        
+        # Rename files sequentially
+        for index, filename in enumerate(image_files, start=1):
+            # Get file extension
+            ext = os.path.splitext(filename)[1].lower()
+            
+            # Create new filename with fixed prefix and 3-digit number
+            new_name = f"{prefix}{index:03d}{ext}"
+            new_path = os.path.join(folder_path, new_name)
+            
+            # Handle name conflicts by finding next available number
+            while os.path.exists(new_path):
+                index += 1
+                new_name = f"{prefix}{index:03d}{ext}"
+                new_path = os.path.join(folder_path, new_name)
+            
+            # Rename the file
+            old_path = os.path.join(folder_path, filename)
+            os.rename(old_path, new_path)
+            print(f"Renamed: {filename} -> {new_name}")
+
+
+    rename_with_fixed_prefix(r"C:\Users\ASUS\Desktop\Main\Srishti\Sem 6\Mathematical Experiments with Code\A2_Mudra_Detection\Nomenclature_Code\Mudras\Arala\Right", "T3M1R")
+    ```
+
+    </details>
+
+    <p>**Link to Dataset Creation Code for File Path List Generation**
+
+    This Python script creates a JSON file that simply lists the names of the images in the folder, so easing the processing burden on the JavaScript file by removing the necessity to navigate the image directory.
+
+    </p>
+
+    <details><summary>Click to view the Python script</summary>
+
+    ``` python
+    import os
+    import json
+
+    image_folder = r'C:\Users\ASUS\Desktop\Main\Srishti\Sem 6\Mathematical Experiments with Code\A2_Mudra_Detection\Nomenclature_Code\new-images'
+
+    filenames = [f for f in os.listdir(image_folder) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+    filenames.sort()
+
+    output_path = os.path.join(image_folder, 'fileList.json')
+
+    with open(output_path, 'w') as f:
+        json.dump(filenames, f, indent=2)
+
+    print(f'fileList.json generated with {len(filenames)} files.')
+    ```
+
+    </details>
+
     <p>**Link to Dataset Creation Code**
 
-    The code functions correctly only in a local environment using VSCode with the Live Server extension. The setup shown below illustrates the development environment to help demonstrate how the code works.</p>
+    The code is only functional in a local environment when VSCode is used in conjunction with the Live Server extension. The following is just to show the functionality of the code.</p>
 
     <iframe src="https://editor.p5js.org/diyamantri/sketches/pnf5vzBoL" width="775px" height="775px" style="border: 3px solid #2f5c70; border-radius: 10px;"></iframe>
 
