@@ -3,6 +3,8 @@ title: "Mudra Training and Detection"
 format: html
 author: "Diya Mantri"
 date: "2025-04-15"
+image: mudra-cover.jpg
+description: Make a mudra, and our model sings the perfect Raaga!
 ---
 
 ```{=html}

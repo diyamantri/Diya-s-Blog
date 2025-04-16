@@ -3,6 +3,8 @@ title: "Destruction and Rebirth"
 format: html
 author: "Diya Mantri"
 date: "2025-03-31"
+image: dandelion.jpg
+description: The rain washes away, and something begins again...
 ---
 
 ```{=html}
