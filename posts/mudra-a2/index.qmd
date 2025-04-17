@@ -42,7 +42,7 @@ Team-3: Diya Mantri, Arya Mohan, Gayatri Jadhav, Rithika Amireddi, Tanmayee M
 
 <p>Our custom-trained model plays the perfect Chitta Swarams when it detects traditional Indian mudras. Just make a mudra to your camera, and it will recognize it and start singing the Raaga!
 
-PLease click on the title 'Mudra-Chittaswaram Classifier' to open it on a new tab.</p>
+PLease click on the title 'Mudra-Chittaswaram Classifier' to open it in a new tab.</p>
 
 ::: {style="position: relative; display: inline-block;"}
 <!-- Your iframe -->
